@@ -1,0 +1,113 @@
+<link rel="stylesheet"
+
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+
+crossorigin="anonymous">
+
+<style>
+
+        body{
+
+                background-color: #b87a76;
+
+        }
+
+        input{
+              
+                width: 20%;
+
+                padding: 5px 5px;
+
+                margin: 8px 600px;
+
+                box-sizing: border-box;
+
+        }
+
+        input::placeholder {
+
+          color: #d3d3d3;
+
+        }
+
+        .submit{
+
+                background-color: #c6c9cc;
+
+        }
+
+        .center-column{
+
+                width:600px;
+
+                margin: 20px auto;
+
+                padding:20px;
+
+                background-color: #fff;
+
+                border-radius: 3px;
+
+                box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+
+        }
+
+        .item-row{
+
+                background-color: #b0a2c2;
+
+                margin: 10px;
+
+                padding: 20px;
+
+                border-radius: 3px;
+
+                color: #fff;
+
+                font-size: 16px;
+
+                box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+
+        }
+
+        .btn-danger{
+
+               
+
+                background-color: #ff1919;
+
+                border-color: #e51b00;
+                width: 20rem;
+                position: relative;
+                right: 11px;
+        }
+
+        #pkk{
+             box-sizing: border-box;
+             width: 10rem;
+             margin: 100px;
+             position: absolute;
+             left: 37%;
+             
+             
+
+        }
+       
+
+</style>
+
+<br>
+<h3 style="text-align: center;">Are you sure you want to delete "{{item}}" ?</h3>
+
+<br>
+<br>
+
+<button id="pkk" type="button" class="btn btn-warning"><a href="{% url 'list' %}" text-decoration:none >Cancel</a></button>
+<form id="pkkk" method="POST" action="">
+{% csrf_token %}
+<br>
+<input  class="btn btn-danger" type="submit" name="Confirm"  >
+
+</form>
